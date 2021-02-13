@@ -1,0 +1,144 @@
+.main{
+	width: 1600px;
+	height: 900px;
+	background-image: url(bg.png);
+	background-size: 100% 100%;
+	
+}
+.body{
+	margin: 0px;
+	background-color: grey;
+	font-family: pixel;
+
+}
+@font-face {
+	font-family: pixel;
+	src: url(pixel.ttf);
+}
+.doomguy {
+	position: absolute;
+	width: 145px;
+	height: 145px;
+	left: 725px;
+	top: 755px;
+}
+.object {
+	position: absolute;
+	transition: 0.9s;
+}
+.object:hover {
+	width: 320px;
+	height: 110px;
+}
+.objects-box {
+	width: 670px;
+	height: 300px;
+	position: absolute;
+	left: 475px;
+	top: 150px;
+	background-color: #6a010030;
+}
+.count-box1	 {
+	position: absolute;
+	width: 570px;
+	height: 145px;
+	left: 160px;
+	top: 755px;
+}
+.count-box2	 {
+	position: absolute;
+	width: 570px;
+	height: 145px;
+	left: 865px;
+	top: 755px;
+}
+.count-name {
+	color: #c0c0c0;
+	text-align: center;
+	margin-top: 15px;
+	font-family: pixel;
+	font-size: 25px;
+	text-shadow: black 2px 3px 4px;
+}
+.count {
+	text-align: center;
+	color: #e20403;
+	margin: 0;
+	text-shadow: black 2px 3px 4px;
+	font-size: 40px
+}
+.target{
+	margin: 0;
+	margin-left: 50px;
+	text-shadow: black 2px 3px 4px;
+	color: #c0c0c0;
+}
+.targetname {
+	color: #e20403
+}
+.btn {
+	width: 200px;
+	height: 70px;
+	font-family: pixel;
+	background-color: #e20403;
+	color: #c0c0c0;
+	border: 0;
+	font-size: 35px;
+	font-weight: 70px;
+	position: absolute;
+	left: 700px;
+	top: 570px;
+}
+
+.sg{
+	width: 300px;
+	height: 100px;
+	background-color: none;
+	background-image: url(shotgun.png);
+	background-size: 100% 100%;
+	top: 20px;
+}
+.bfg{
+	width: 300px;
+	height: 100px;
+	background-color: none;
+	left: 350px;
+	background-image: url(bfg.png);
+	background-size: 100% 100%;
+}
+.chainsaw{
+	width: 300px;
+	height: 100px;
+	top: 150px;
+	background-color: none;
+	background-image: url(chainsaw.png);
+	background-size: 100% 100%;
+}
+.lmg{
+	width: 300px;
+	height: 100px;
+	top: 170px;
+	left: 350px;
+	background-color: none;
+	background-image: url(machinegun.png);
+	background-size: 100% 100%;
+}
+
+.win {
+	width: 670px;
+	height: 300px;
+	position: absolute;
+	left: 475px;
+	top: 150px;
+	background-image: url(expl.gif);
+	background-size: 100% 100%;
+	display: none;
+	
+}
+.wintext {
+	color: #e20403;
+	font-size: 50px;
+	margin-top: 250px;
+	text-align: center;
+	text-shadow: black 2px 3px 4px;
+}

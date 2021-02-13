@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="body">
+	<div class="main">
+		<h1 class="target">TARGET: <span class="targetname"></span> </h1>
+		<div class="objects-box">
+			<div class="object sg"></div>
+			<div class="object bfg"></div>
+			<div class="object chainsaw"></div>
+			<div class="object lmg"></div>
+		</div>
+		<div>
+			<img src="doomguy.gif" class="doomguy">
+			<div class="count-box1">
+				<h1 class="count"><span class="attempts"></span></h1>
+				<h1 class="count-name">ATTEMPTS</h1>
+			</div>
+			<div class="count-box2">
+				<h1 class="count"><span class="level"></span></h1>
+				<h1 class="count-name">LEVEL</h1>
+			</div>
+		</div>
+		<button class="btn">START</button>
+	</div>
+	<script type="text/javascript">
+		let attempts = 2;
+		let level = 1;
+		let targetname = 'SHOTGUN'
+		document.querySelector('.attempts').innerHTML = attempts;
+		document.querySelector('.level').innerHTML = level;
+		document.querySelector('.targetname').innerHTML = targetname;
+
+		document.querySelector('.btn').onclick = function(){
+
+			document.querySelector('.btn').style.display='none'
+
+			document.querySelector('.sg').style.backgroundImage = 'url(black.png)'
+			document.querySelector('.bfg').style.backgroundImage = 'url(black.png)'
+			document.querySelector('.chainsaw').style.backgroundImage = 'url(black.png)'
+			document.querySelector('.lmg').style.backgroundImage = 'url(black.png)'
+
+			document.querySelector('.sg').style.top = '150px'
+			document.querySelector('.chainsaw').style.top = '0px'
+			document.querySelector('.bfg').style.top = '150px'
+			document.querySelector('.lmg').style.top = '0px'
+
+			document.querySelector('.bfg').onclick = function(){
+				attempts -= 1
+				document.querySelector('.attempts').innerHTML = attempts;
+				if (attempts == 0) {
+					alert('L')
+				}
+			}
+			document.querySelector('.chainsaw').onclick = function(){
+				attempts -= 1
+				document.querySelector('.attempts').innerHTML = attempts;
+				if (attempts == 0) {
+					alert('L')
+				}
+			}
+			document.querySelector('.lmg').onclick = function(){
+				attempts -= 1
+				document.querySelector('.attempts').innerHTML = attempts;
+				if (attempts == 0) {
+					alert('L')
+				}
+			}
+			document.querySelector('.sg').onclick = function(){
+				alert('W')
+				document.querySelector('.btn').style.display='table';
+
+				document.querySelector('.sg').style.backgroundImage = 'url(shotgun.png)'
+				document.querySelector('.bfg').style.backgroundImage = 'url(bfg.png)'
+				document.querySelector('.chainsaw').style.backgroundImage = 'url(chainsaw.png)'
+				document.querySelector('.lmg').style.backgroundImage = 'url(machinegun.png)'
+
+				document.querySelector('.btn').onclick = function(){
+					level += 1
+					document.querySelector('.level').innerHTML = level;
+					document.querySelector('.btn').style.display='none'
+
+					document.querySelector('.sg').style.backgroundImage = 'url(black.png)'
+					document.querySelector('.bfg').style.backgroundImage = 'url(black.png)'
+					document.querySelector('.chainsaw').style.backgroundImage = 'url(black.png)'
+					document.querySelector('.lmg').style.backgroundImage = 'url(black.png)'
+
+					document.querySelector('.sg').style.left = '350px'
+					document.querySelector('.chainsaw').style.left = '350px'
+					document.querySelector('.bfg').style.left = '0px'
+					document.querySelector('.lmg').style.left = '0px'
+				}
+		}
+	</script>
+</body>
+</html>
